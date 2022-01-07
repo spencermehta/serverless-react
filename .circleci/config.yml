@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.10
+      - image: circleci/node:16.13
 
     working_directory: ~/repo
 
@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Install Serverless CLI and dependencies
           command: |
-            # sudo npm i -g serverless
+            sudo npm i -g serverless
             npm install
 
       - save_cache:
